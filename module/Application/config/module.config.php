@@ -52,6 +52,64 @@ return array(
             ),
         ),
     ),
+    'navigation' => array(
+        'top_left' => array(
+            array(
+                'label' => 'Home',
+                'route' => 'home',
+            ),
+//             array(
+//                 'label' => 'New Stuff',
+//                 'route' => 'home',
+//             ),
+            array(
+                'label' => 'Demo Forms',
+                'route' => 'application',
+                'pages' => array(
+                    array(
+                        'label'      => 'Inline',
+                        'route'      => 'application/default',
+                        'controller' => 'form',
+                        'action'     => 'index'
+                    ),
+                    array(
+                        'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+                    ),
+                    array(
+                        'label'      => 'Horzontal',
+                        'route'      => 'application/default',
+                        'controller' => 'form',
+                        'action'     => 'horzontal'
+                    ),
+                ),
+            ),
+//             'pages' =>array(
+//                 'label' => 'Page #2',
+//                 'route' => 'application/default',
+//                 'controller' => 'form',
+//                 'action' => 'index'
+//             ),
+        ),
+        'top_right' => array(
+        ),
+        'bottom_left' => array(
+            array(
+                'label' => 'Sheet 1',
+                'route' => 'home',
+            ),
+            array(
+                'label' => 'Sheet 2',
+                'route' => 'home',
+            ),
+            array(
+                'label' => 'Sheet 3',
+                'route' => 'home',
+            ),
+        ),
+        'bottom_right' => array(
+        ),
+        
+    ),
     'service_manager' => array(
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
@@ -59,6 +117,13 @@ return array(
         ),
         'aliases' => array(
             'translator' => 'MvcTranslator',
+        ),
+        'factories' => array(
+            'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
+            'topleft_navigation' => 'JStormes\Bootstrap\Navigation\Service\TopLeftNavigationFactory',
+        ),
+        'services' => array(
+            
         ),
     ),
     'translator' => array(
@@ -73,7 +138,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\Form' => 'Application\Controller\FormController'
         ),
     ),
     'view_manager' => array(
@@ -96,6 +162,13 @@ return array(
     'console' => array(
         'router' => array(
             'routes' => array(
+            ),
+        ),
+    ),
+    'jstormes' => array(
+        'bootstrap' => array(
+            'menu' => array(
+                'enabled' =>true,
             ),
         ),
     ),

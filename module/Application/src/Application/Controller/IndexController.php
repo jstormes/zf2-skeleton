@@ -11,11 +11,17 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use JStormes\Bootstrap\View\Helper\Form\HorizontalText;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
+       
+        
+        $t = new HorizontalText('test', 'test');
         return new ViewModel();
+        
+        
     }
 }
