@@ -1,3 +1,11 @@
 [submodule "vendor/ZF2"]
 	path = vendor/ZF2
 	url = https://github.com/zendframework/zf2.git
+[submodule "vendor\\SimpleSAMLphp"]
+	path = vendor\\SimpleSAMLphp
+	url = git@github.com:simplesamlphp/simplesamlphp.git
+	branch = master
+[submodule "vendor/SimpleSAMLphp"]
+	path = vendor/SimpleSAMLphp
+	url = git@github.com:simplesamlphp/simplesamlphp.git
+	branch = master
