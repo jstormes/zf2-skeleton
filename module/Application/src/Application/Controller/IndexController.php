@@ -21,7 +21,15 @@ class IndexController extends AbstractActionController
         
         $t = new HorizontalText('test', 'test');
         return new ViewModel();
-        
-        
+  
+    }
+    
+    public function sheetAction()
+    {
+         
+    
+        $t = new HorizontalText('test', 'test');
+        return new ViewModel();
+    
     }
 }

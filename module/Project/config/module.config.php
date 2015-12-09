@@ -112,7 +112,7 @@ return array(
                 
                 // URI Example
                 //'uri' => 'http://stormes.net',
-                'params'     => array('id' => 42)
+                
             ),
             array(
                 'label' => 'Sheet 2',

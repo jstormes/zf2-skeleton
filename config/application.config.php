@@ -2,8 +2,10 @@
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
+        'Project',
         'Application',
-        'JStormes\Bootstrap'
+        'JStormes\Bootstrap',
+        
     ),
 
     // These are various options for the listeners attached to the ModuleManager
@@ -62,4 +64,23 @@ return array(
    // Initial configuration with which to seed the ServiceManager.
    // Should be compatible with Zend\ServiceManager\Config.
    // 'service_manager' => array(),
+   
+    
+    
+    'view_manager' => array(
+        'display_not_found_reason' => true,
+        'display_exceptions'       => true,
+        'doctype'                  => 'HTML5',
+        'not_found_template'       => 'error/404',
+        'exception_template'       => 'error/index',
+        'template_map' => array(
+            'layout/layout'           => __DIR__ . '/../../../layout/four_corners.phtml',
+            'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
+            'error/404'               => __DIR__ . '/../view/error/404.phtml',
+            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+        ),
+        'template_path_stack' => array(
+            __DIR__ . '/../view',
+        ),
+    ),
 );
