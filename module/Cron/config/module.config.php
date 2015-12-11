@@ -10,27 +10,27 @@
 return array(
     'router' => array(
         'routes' => array(
-            'home' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => array(
-                    'route'    => '/',
-                    'defaults' => array(
-                        'controller' => 'Project\Controller\Index',
-                        'action'     => 'index',
-                    ),
+//             'home' => array(
+//                 'type' => 'Zend\Mvc\Router\Http\Literal',
+//                 'options' => array(
+//                     'route'    => '/',
+//                     'defaults' => array(
+//                         'controller' => 'Demo\Controller\Index',
+//                         'action'     => 'index',
+//                     ),
                     
-                ),
-            ),
+//                 ),
+//             ),
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
-            'project' => array(
+            'cron' => array(
                 'type'    => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/project',
+                    'route'    => '/cron',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Project\Controller',
+                        '__NAMESPACE__' => 'Cron\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index',
                     ),
@@ -61,8 +61,35 @@ return array(
     'navigation' => array(
         'top_left' => array(
             array(
-                'label' => 'Project',
-                'route' => 'project',
+                'label' => 'Cron',
+                'route' => 'cron',
+                'pages' => array(
+                    array(
+                        'label'      => 'Hourly (15 after the hour)',
+                        'route'      => 'cron',
+                        'controller' => 'form',
+                        'action'     => 'index'
+                        
+                    ),
+                    array(
+                        'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+                    ),
+                    array(
+                        'label'      => 'Daily (3:01 AM)',
+                        'route'      => 'cron',
+                        'controller' => 'form',
+                        'action'     => 'horzontal'
+                    ),
+                    array(
+                        'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+                    ),
+                    array(
+                        'label'      => 'Weekly (Mondayy Morning 5:00 AM)',
+                        'route'      => 'cron',
+                        'controller' => 'form',
+                        'action'     => 'horzontal'
+                    ),
+                ),
             ),
 //             array(
 //                 'label' => 'New Stuff',
@@ -156,7 +183,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Project\Controller\Index' => 'Project\Controller\IndexController',
+            'Cron\Controller\Index' => 'Cron\Controller\IndexController',
         ),
     ),
     'view_manager' => array(

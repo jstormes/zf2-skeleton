@@ -10,27 +10,27 @@
 return array(
     'router' => array(
         'routes' => array(
-            'home' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => array(
-                    'route'    => '/',
-                    'defaults' => array(
-                        'controller' => 'Project\Controller\Index',
-                        'action'     => 'index',
-                    ),
+//             'home' => array(
+//                 'type' => 'Zend\Mvc\Router\Http\Literal',
+//                 'options' => array(
+//                     'route'    => '/',
+//                     'defaults' => array(
+//                         'controller' => 'Demo\Controller\Index',
+//                         'action'     => 'index',
+//                     ),
                     
-                ),
-            ),
+//                 ),
+//             ),
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
-            'project' => array(
+            'reporting' => array(
                 'type'    => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/project',
+                    'route'    => '/reporting',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Project\Controller',
+                        '__NAMESPACE__' => 'Reporting\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index',
                     ),
@@ -61,8 +61,35 @@ return array(
     'navigation' => array(
         'top_left' => array(
             array(
-                'label' => 'Project',
-                'route' => 'project',
+                'label' => 'Reporting',
+                'route' => 'reporting',
+                'pages' => array(
+                    array(
+                        'label'      => 'Report 1',
+                        'route'      => 'reporting',
+                        'controller' => 'index',
+                        'action'     => 'index'
+                        
+                    ),
+                    array(
+                        'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+                    ),
+                    array(
+                        'label'      => 'Report 2',
+                        'route'      => 'reporting',
+                        'controller' => 'index',
+                        'action'     => 'index'
+                    ),
+                    array(
+                        'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+                    ),
+                    array(
+                        'label'      => 'Report 3',
+                        'route'      => 'reporting',
+                        'controller' => 'index',
+                        'action'     => 'index'
+                    ),
+                ),
             ),
 //             array(
 //                 'label' => 'New Stuff',
@@ -156,7 +183,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Project\Controller\Index' => 'Project\Controller\IndexController',
+            'Reporting\Controller\Index' => 'Reporting\Controller\IndexController',
         ),
     ),
     'view_manager' => array(

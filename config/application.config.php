@@ -2,9 +2,40 @@
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
+        
+        // The Project module provides basic project managment, this module can 
+        // be customized to meet your applications specific need.  The sql schema
+        // file can be found in documentation and the database service is named
+        // project_db.  If your application dose not need project support, simply 
+        // comment out the next line.
         'Project',
+        
+        // The Application module is your starting point to write your application
+        // logic.
         'Application',
+        
+        // The Demo module provides sample controllers and views to help you get 
+        // a quick start using the framework and helpers.
+//         'Demo',
+        
+        // The Reporting module provides a starting point for your reports and 
+        // can build the reporting menu dynamically based on your models.
+//         'Reporting',
+
+        // The Cron module provides a framework for Cron jobs.
+//         'Cron',
+        
+        // The Authentication module provides basic Authentication. The sql schema
+        // file can be found in documentation and the database servic is named
+        // authentication_db.  If you do not need authentication comment out the
+        // next line.
+//         'Authentication',
+        
+        // Composer modules start here.
         'JStormes\Bootstrap',
+        //'JStormes\Slickgrid',
+        //'JStormes\Xlsx',    
+        //'JStormes\Background',
         
     ),
 
@@ -67,20 +98,5 @@ return array(
    
     
     
-    'view_manager' => array(
-        'display_not_found_reason' => true,
-        'display_exceptions'       => true,
-        'doctype'                  => 'HTML5',
-        'not_found_template'       => 'error/404',
-        'exception_template'       => 'error/index',
-        'template_map' => array(
-            'layout/layout'           => __DIR__ . '/../../../layout/four_corners.phtml',
-            'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
-        ),
-        'template_path_stack' => array(
-            __DIR__ . '/../view',
-        ),
-    ),
+
 );

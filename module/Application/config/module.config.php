@@ -47,6 +47,7 @@ return array(
                             ),
                             'may_terminate' => true,
                             'defaults' => array(
+                                'type'    => 'Zend\Mvc\Router\Http\Segment',
                                 'child_routes' => array(
                                     'route'    => '/[:id]',
                                 ),
@@ -68,27 +69,37 @@ return array(
 //                 'label' => 'New Stuff',
 //                 'route' => 'home',
 //             ),
-            array(
-                'label' => 'Demo Forms',
-                'route' => 'application',
-                'pages' => array(
-                    array(
-                        'label'      => 'Inline',
-                        'route'      => 'application/default',
-                        'controller' => 'form',
-                        'action'     => 'index'
-                    ),
-                    array(
-                        'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
-                    ),
-                    array(
-                        'label'      => 'Horzontal',
-                        'route'      => 'application/default',
-                        'controller' => 'form',
-                        'action'     => 'horzontal'
-                    ),
-                ),
-            ),
+//             array(
+//                 'label' => 'Demo',
+//                 'route' => 'application',
+//                 'pages' => array(
+//                     array(
+//                         'label'      => 'Bootstrap Inline',
+//                         'route'      => 'application/default',
+//                         'controller' => 'form',
+//                         'action'     => 'index'
+                        
+//                     ),
+//                     array(
+//                         'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+//                     ),
+//                     array(
+//                         'label'      => 'Bootstrap Horzontal',
+//                         'route'      => 'application/default',
+//                         'controller' => 'form',
+//                         'action'     => 'horzontal'
+//                     ),
+//                     array(
+//                         'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+//                     ),
+//                     array(
+//                         'label'      => 'Slickgrid Full Screen',
+//                         'route'      => 'application/default',
+//                         'controller' => 'form',
+//                         'action'     => 'horzontal'
+//                     ),
+//                 ),
+//             ),
 //             'pages' =>array(
 //                 'label' => 'Page #2',
 //                 'route' => 'application/default',
@@ -167,8 +178,12 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            //'layout/layout'           => __DIR__ . '/../../../layout/four_corners.phtml',
-            //'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
+            'layout/layout'           => __DIR__ . '/../../../layout/four_corners.phtml',
+            'layout/four_corners'     => __DIR__ . '/../../../layout/four_corners.phtml',
+            'layout/two_corners'      => __DIR__ . '/../../../layout/two_corners.phtml',
+            'layout/menu_top'         => __DIR__ . '/../../../layout/menu_top.phtml',
+            'layout/menu_bottom'      => __DIR__ . '/../../../layout/menu_bottom.phtml',
+            'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ),
