@@ -29,7 +29,7 @@ return array(
         // file can be found in documentation and the database servic is named
         // authentication_db.  If you do not need authentication comment out the
         // next line.
-//         'Authentication',
+        'Authentication',
         
         // Composer modules start here.
         'JStormes\Bootstrap',

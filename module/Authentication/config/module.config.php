@@ -25,12 +25,12 @@ return array(
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
-            'demo' => array(
+            'admin' => array(
                 'type'    => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route'    => '/demo',
+                    'route'    => '/admin',
                     'defaults' => array(
-                        '__NAMESPACE__' => 'Demo\Controller',
+                        '__NAMESPACE__' => 'Authentication\Controller',
                         'controller'    => 'Index',
                         'action'        => 'index',
                     ),
@@ -61,13 +61,13 @@ return array(
     'navigation' => array(
         'top_left' => array(
             array(
-                'label' => 'Demo',
-                'route' => 'demo',
+                'label' => 'Admin',
+                'route' => 'admin',
                 'pages' => array(
                     array(
-                        'label'      => 'Bootstrap Inline',
-                        'route'      => 'demo',
-                        'controller' => 'form',
+                        'label'      => 'Add User',
+                        'route'      => 'admin',
+                        'controller' => 'index',
                         'action'     => 'index'
                         
                     ),
@@ -76,18 +76,18 @@ return array(
                     ),
                     array(
                         'label'      => 'Bootstrap Horzontal',
-                        'route'      => 'demo',
-                        'controller' => 'form',
-                        'action'     => 'horzontal'
+                        'route'      => 'admin',
+                        'controller' => 'index',
+                        'action'     => 'index'
                     ),
                     array(
                         'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
                     ),
                     array(
                         'label'      => 'Slickgrid Full Screen',
-                        'route'      => 'demo',
-                        'controller' => 'form',
-                        'action'     => 'horzontal'
+                        'route'      => 'admin',
+                        'controller' => 'index',
+                        'action'     => 'index'
                     ),
                 ),
             ),
@@ -183,7 +183,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Demo\Controller\Index' => 'Demo\Controller\IndexController',
+            'Authentication\Controller\Index' => 'Authentication\Controller\IndexController',
         ),
     ),
     'view_manager' => array(
