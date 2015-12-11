@@ -16,7 +16,7 @@ return array(
         
         // The Demo module provides sample controllers and views to help you get 
         // a quick start using the framework and helpers.
-//         'Demo',
+        'Demo',
         
         // The Reporting module provides a starting point for your reports and 
         // can build the reporting menu dynamically based on your models.

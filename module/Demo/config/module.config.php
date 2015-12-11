@@ -65,17 +65,28 @@ return array(
                 'route' => 'demo',
                 'pages' => array(
                     array(
-                        'label'      => 'Bootstrap Inline',
+                        'label'      => 'Bootstrap Inline (Post Back)',
                         'route'      => 'demo',
                         'controller' => 'form',
                         'action'     => 'index'
-                        
+                    ),
+                    array(
+                        'label'      => 'Bootstrap Inline (AJAX)',
+                        'route'      => 'demo',
+                        'controller' => 'form',
+                        'action'     => 'index'
                     ),
                     array(
                         'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
                     ),
                     array(
-                        'label'      => 'Bootstrap Horzontal',
+                        'label'      => 'Bootstrap Horzontal (Post Back)',
+                        'route'      => 'demo',
+                        'controller' => 'form',
+                        'action'     => 'horzontal'
+                    ),
+                    array(
+                        'label'      => 'Bootstrap Horzontal (AJAX)',
                         'route'      => 'demo',
                         'controller' => 'form',
                         'action'     => 'horzontal'
@@ -85,6 +96,15 @@ return array(
                     ),
                     array(
                         'label'      => 'Slickgrid Full Screen',
+                        'route'      => 'demo',
+                        'controller' => 'form',
+                        'action'     => 'horzontal'
+                    ),                    
+                    array(
+                        'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+                    ),
+                    array(
+                        'label'      => 'Menu Demo Code',
                         'route'      => 'demo',
                         'controller' => 'form',
                         'action'     => 'horzontal'
