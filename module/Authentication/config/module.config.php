@@ -75,7 +75,7 @@ return array(
                         'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
                     ),
                     array(
-                        'label'      => 'Bootstrap Horzontal',
+                        'label'      => 'Settings',
                         'route'      => 'admin',
                         'controller' => 'index',
                         'action'     => 'index'

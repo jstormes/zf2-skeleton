@@ -104,7 +104,16 @@ return array(
                         'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
                     ),
                     array(
-                        'label'      => 'Menu Demo Code',
+                        'label'      => 'Menus',
+                        'route'      => 'demo',
+                        'controller' => 'form',
+                        'action'     => 'horzontal'
+                    ),
+                    array(
+                        'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
+                    ),
+                    array(
+                        'label'      => 'DataTables',
                         'route'      => 'demo',
                         'controller' => 'form',
                         'action'     => 'horzontal'

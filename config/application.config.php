@@ -20,10 +20,10 @@ return array(
         
         // The Reporting module provides a starting point for your reports and 
         // can build the reporting menu dynamically based on your models.
-//         'Reporting',
+        'Reporting',
 
         // The Cron module provides a framework for Cron jobs.
-//         'Cron',
+        'Cron',
         
         // The Authentication module provides basic Authentication. The sql schema
         // file can be found in documentation and the database servic is named
@@ -36,6 +36,7 @@ return array(
         //'JStormes\Slickgrid',
         //'JStormes\Xlsx',    
         //'JStormes\Background',
+        //'JStormes\Datatables'
         
     ),
 
