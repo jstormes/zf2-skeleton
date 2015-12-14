@@ -13,11 +13,13 @@ classes should alter those!
 .slick-header-column {
   /* background: url('/images/header-columns-bg.gif') repeat-x center bottom; */
   /* border-right: 1px solid silver; */
+	font-weight: bold;
 }
 
 .slick-header-column:hover, .slick-header-column-active {
 	background: #eaeaea;
 	color: black;
+	
 }
 
 .slick-header-column:hover  .slick-resizable-handle {
@@ -31,6 +33,9 @@ classes should alter those!
 
 .slick-header-column.ui-state-default {
 	border-right: 0;
+	height: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 
@@ -143,6 +148,8 @@ classes should alter those!
   to { box-shadow: none; }
 }
 
+
+/* Fix slickgrid for bootstrap */
 [class^="slickgrid_"],
 [class^="slickgrid_"] div {
     -webkit-box-sizing: content-box;

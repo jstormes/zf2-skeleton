@@ -15,7 +15,7 @@ $this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick-bootst
 <div class="row">
     <div class="col-lg-12">
 
-      <div id="grid" style="height:500px;"></div>
+      <div id="grid" style="height:90vh;"></div>
 
     </div>
 </div>
@@ -30,13 +30,19 @@ $this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick-bootst
 
 
 <script>
+function myFormatter(row, cell, value, columnDef, dataContext) {
+	  return "<button type=\"button\" class=\"btn btn-primary btn-xs\">Extra small button</button>";
+	}
+
+
+
   var grid;
   var columns = [
     {id: "title", name: "Title", field: "title"},
     {id: "duration", name: "Duration", field: "duration"},
     {id: "%", name: "% Complete", field: "percentComplete"},
     {id: "start", name: "Start", field: "start"},
-    {id: "finish", name: "Finish", field: "finish"},
+    {id: "finish", name: "", field: "finish", formatter: myFormatter},
     {id: "effort-driven", name: "Effort Driven", field: "effortDriven"}
   ];
   var options = {
