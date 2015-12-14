@@ -8,7 +8,7 @@ return array(
         // file can be found in documentation and the database service is named
         // project_db.  If your application dose not need project support, simply 
         // comment out the next line.
-        'Project',
+       'Project',
         
         // The Application module is your starting point to write your application
         // logic.
@@ -20,16 +20,16 @@ return array(
         
         // The Reporting module provides a starting point for your reports and 
         // can build the reporting menu dynamically based on your models.
-        'Reporting',
+//         'Reporting',
 
         // The Cron module provides a framework for Cron jobs.
-        'Cron',
+//         'Cron',
         
         // The Authentication module provides basic Authentication. The sql schema
         // file can be found in documentation and the database servic is named
         // authentication_db.  If you do not need authentication comment out the
         // next line.
-        'Authentication',
+//        'Authentication',
         
         // Composer modules start here.
         'JStormes\Bootstrap',

@@ -65,7 +65,7 @@ return array(
                 'route' => 'admin',
                 'pages' => array(
                     array(
-                        'label'      => 'Add User',
+                        'label'      => 'Users',
                         'route'      => 'admin',
                         'controller' => 'index',
                         'action'     => 'index'

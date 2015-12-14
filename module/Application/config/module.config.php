@@ -178,7 +178,7 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/layout'           => __DIR__ . '/../../../layout/four_corners.phtml',
+            'layout/layout'           => __DIR__ . '/../../../layout/two_corners.phtml',
             'layout/four_corners'     => __DIR__ . '/../../../layout/four_corners.phtml',
             'layout/two_corners'      => __DIR__ . '/../../../layout/two_corners.phtml',
             'layout/menu_top'         => __DIR__ . '/../../../layout/menu_top.phtml',

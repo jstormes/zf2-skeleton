@@ -1,0 +1,63 @@
+<?php
+$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick.grid.css');
+$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick-bootstrap-theme2.css');
+//$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick-default-theme.css');
+//$this->headLink()->prependStylesheet($this->basePath() . '/slickgrid/examples.css');
+//$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/bootstrap.css');
+//$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/bs1.css');
+//$this->headLink()->prependStylesheet($this->basePath() . 'http://reebalazs.github.io/SlickGrid-bootstrap/examples/dist/example-bootstrap.css');
+//$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/fix_for_bootstrap.css');
+
+?>
+
+<br />
+
+<div class="row">
+    <div class="col-lg-12">
+
+      <div id="grid" style="height:500px;"></div>
+
+    </div>
+</div>
+
+
+
+<script src="/js/jquery.event.drag-2.2.js"></script>
+<script src="/jquery-ui/jquery-ui.min.js"></script>
+
+<script src="/slickgrid/slick.core.js"></script>
+<script src="/slickgrid/slick.grid.js"></script>
+
+
+<script>
+  var grid;
+  var columns = [
+    {id: "title", name: "Title", field: "title"},
+    {id: "duration", name: "Duration", field: "duration"},
+    {id: "%", name: "% Complete", field: "percentComplete"},
+    {id: "start", name: "Start", field: "start"},
+    {id: "finish", name: "Finish", field: "finish"},
+    {id: "effort-driven", name: "Effort Driven", field: "effortDriven"}
+  ];
+  var options = {
+    enableCellNavigation: true,
+    enableColumnReorder: true,
+    forceFitColumns: true,
+    rowHeight: 35,
+    
+  };
+  $(function () {
+    var data = [];
+    for (var i = 0; i < 500; i++) {
+      data[i] = {
+        title: "Task " + i,
+        duration: "5 days",
+        percentComplete: Math.round(Math.random() * 100),
+        start: "01/01/2009",
+        finish: "01/05/2009",
+        effortDriven: (i % 5 == 0)
+      };
+    }
+    grid = new Slick.Grid("#grid", data, columns, options);
+  })
+</script>

@@ -1,0 +1,8 @@
+@import url('slick-default-theme.css');
+
+
+.slick-header-column {
+    /* border-right: 0px; */
+	/* border-width: 0 0 0 0; */
+    border-style: none none none none;
+}

@@ -45,12 +45,6 @@ return array(
                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                             ),
-                            'may_terminate' => true,
-                            'defaults' => array(
-                                'child_routes' => array(
-                                    'route'    => '/[:id]',
-                                ),
-                            ),
                         ),
         
                     ),
@@ -62,17 +56,17 @@ return array(
         'top_left' => array(
             array(
                 'label' => 'Demo',
-                'route' => 'demo',
+                'route' => 'demo/default',
                 'pages' => array(
                     array(
                         'label'      => 'Bootstrap Inline (Post Back)',
-                        'route'      => 'demo',
+                        'route'      => 'demo/default',
                         'controller' => 'form',
                         'action'     => 'index'
                     ),
                     array(
                         'label'      => 'Bootstrap Inline (AJAX)',
-                        'route'      => 'demo',
+                        'route'      => 'demo/default',
                         'controller' => 'form',
                         'action'     => 'index'
                     ),
@@ -81,13 +75,13 @@ return array(
                     ),
                     array(
                         'label'      => 'Bootstrap Horzontal (Post Back)',
-                        'route'      => 'demo',
+                        'route'      => 'demo/default',
                         'controller' => 'form',
                         'action'     => 'horzontal'
                     ),
                     array(
                         'label'      => 'Bootstrap Horzontal (AJAX)',
-                        'route'      => 'demo',
+                        'route'      => 'demo/default',
                         'controller' => 'form',
                         'action'     => 'horzontal'
                     ),
@@ -96,16 +90,22 @@ return array(
                     ),
                     array(
                         'label'      => 'Slickgrid Full Screen',
-                        'route'      => 'demo',
+                        'route'      => 'demo/default',
                         'controller' => 'form',
                         'action'     => 'horzontal'
-                    ),                    
+                    ),  
+                    array(
+                        'label'      => 'Slickgrid Bootstrap',
+                        'route'      => 'demo/default',
+                        'controller' => 'slickgrid',
+                        'action'     => 'bootstrap'
+                    ),
                     array(
                         'type'      => 'JStormes\Bootstrap\Navigation\Page\Divider',
                     ),
                     array(
                         'label'      => 'Menus',
-                        'route'      => 'demo',
+                        'route'      => 'demo/default',
                         'controller' => 'form',
                         'action'     => 'horzontal'
                     ),
@@ -213,6 +213,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Demo\Controller\Index' => 'Demo\Controller\IndexController',
+            'Demo\Controller\Slickgrid' => 'Demo\Controller\SlickgridController',
         ),
     ),
     'view_manager' => array(
