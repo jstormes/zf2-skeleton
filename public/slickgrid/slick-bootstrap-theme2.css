@@ -23,6 +23,11 @@ classes should alter those!
 .slick-header-column:hover  .slick-resizable-handle {
 	background: white url('/images/texture.jpg') repeat-x center bottom;
 }
+.slick-resizable-handle {
+
+  width: 6px;
+  
+}
 
 .slick-header-column.ui-state-default {
 	border-right: 0;
