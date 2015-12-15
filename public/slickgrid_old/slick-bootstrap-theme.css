@@ -6,65 +6,39 @@ classes should alter those!
 */
 
 .slick-header-columns {
-  background: url('images/header-columns-bg.gif') repeat-x center bottom;
   border-bottom: 1px solid silver; 
 }
 
 .slick-header-column {
-  background: url('images/header-columns-bg.gif') repeat-x center bottom;
-  /* border-right: 1px solid silver; */
-}
-
-.slick-header-column.ui-state-default {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  height: 16px;
-  line-height: 16px;
-  margin: 0;
-  padding: 8px;
-  border-right: 0px;
-  border-left: 0px;
-  border-top: 0px;
-  border-bottom: 0px;
-  float: left;
-}
-
-.grid-canvas {
-
-	border-top: 2px;
-	
-	border-top: 1px solid transparent;
-	border-bottom: 1px solid transparent;
-  
-  border-top-color: silver;
-	
-
-}
-
-.slick-cell, .slick-headerrow-column {
-  position: absolute;
-  border: 1px solid transparent;
-  border-right: 1;
-  border-bottom-color: silver;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  vertical-align: middle;
-  z-index: 1;
-  padding: 1px 2px 2px 1px;
-  margin: 0;
-  white-space: nowrap;
-  cursor: default;
-	
-	padding-top: 6px;
-  padding-bottom: 6px;
+	font-weight: bold;
 }
 
 .slick-header-column:hover, .slick-header-column-active {
-  background: white url('images/header-columns-over-bg.gif') repeat-x center bottom;
+	background: #eaeaea;
+	color: black;
+	
+}
+
+.slick-header-column:hover  .slick-resizable-handle {
+	background: white url('/images/texture.jpg') repeat-x center bottom;
+}
+.slick-resizable-handle {
+
+  width: 6px;
+  
+}
+
+.slick-header-column.ui-state-default {
+	border-right: 0;
+	height: 16px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+
+.slick-cell, .slick-headerrow-column {
+	padding-top: 6px;
+	padding-bottom: 6px;
 }
 
 .slick-headerrow {
@@ -96,6 +70,8 @@ classes should alter those!
 .slick-cell {
   padding-left: 4px;
   padding-right: 4px;
+	
+   border-right: 1px; 
 }
 
 .slick-group {
@@ -123,11 +99,15 @@ classes should alter those!
 
 .slick-cell.selected {
   background-color: beige;
+	
 }
 
 .slick-cell.active {
   border-color: gray;
   border-style: solid;
+	
+	background-color: beige;
+	padding-right: 0px;
 }
 
 .slick-sortable-placeholder {
@@ -165,6 +145,8 @@ classes should alter those!
   to { box-shadow: none; }
 }
 
+
+/* Fix slickgrid to be compatable with bootstrap */
 [class^="slickgrid_"],
 [class^="slickgrid_"] div {
     -webkit-box-sizing: content-box;

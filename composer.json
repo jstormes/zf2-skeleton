@@ -4,7 +4,9 @@
   "require" : {
     "php" : ">=5.3.3",
     "zendframework/zendframework" : "2.3.*",
-    "jstormes/bootstrap" : ">=0.0.3"
+    "jstormes/bootstrap" : ">=0.0.3",
+    "rwoverdijk/assetmanager" : ">=1.4.4",
+    "jstormes/phpslickgrid" : ">=0.0.1"
   },
   "repositories" : [ {
     "type" : "vcs",
@@ -12,6 +14,12 @@
   }, {
     "type" : "vcs",
     "url" : "https://github.com/jstormes/bootstrap.git"
+  }, {
+    "type" : "vcs",
+    "url" : "https://github.com/RWOverdijk/AssetManager.git"
+  }, {
+    "type" : "vcs",
+    "url" : "https://github.com/jstormes/phpslickgrid.git"
   } ],
   "keywords" : [ "framework", "zf2" ],
   "license" : "BSD-3-Clause",

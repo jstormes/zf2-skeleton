@@ -1,13 +1,6 @@
 <?php
 $this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick.grid.css');
-$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick-bootstrap-theme2.css');
-//$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick-default-theme.css');
-//$this->headLink()->prependStylesheet($this->basePath() . '/slickgrid/examples.css');
-//$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/bootstrap.css');
-//$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/bs1.css');
-//$this->headLink()->prependStylesheet($this->basePath() . 'http://reebalazs.github.io/SlickGrid-bootstrap/examples/dist/example-bootstrap.css');
-//$this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/fix_for_bootstrap.css');
-
+$this->headLink()->appendStylesheet($this->basePath() . '/phpslickgrid/css/slick-bootstrap-theme.css');
 ?>
 
 <br />
@@ -28,13 +21,12 @@ $this->headLink()->appendStylesheet($this->basePath() . '/slickgrid/slick-bootst
 <script src="/slickgrid/slick.core.js"></script>
 <script src="/slickgrid/slick.grid.js"></script>
 
+<script src="/phpslickgrid/js/editors/mysql.js"></script>
 
 <script>
 function myFormatter(row, cell, value, columnDef, dataContext) {
 	  return "<button type=\"button\" class=\"btn btn-primary btn-xs\">Extra small button</button>";
 	}
-
-
 
   var grid;
   var columns = [

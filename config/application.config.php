@@ -3,12 +3,16 @@ return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
         
+        // Asset manager allows for each module to have it's own /public directory 
+        // to hold our assets like JavaScript files and CSS files.
+        'AssetManager',
+        
         // The Project module provides basic project managment, this module can 
         // be customized to meet your applications specific need.  The sql schema
         // file can be found in documentation and the database service is named
         // project_db.  If your application dose not need project support, simply 
         // comment out the next line.
-       'Project',
+        'Project',
         
         // The Application module is your starting point to write your application
         // logic.
@@ -33,7 +37,7 @@ return array(
         
         // Composer modules start here.
         'JStormes\Bootstrap',
-        //'JStormes\Slickgrid',
+        'JStormes\PHPSlickGrid',
         //'JStormes\Xlsx',    
         //'JStormes\Background',
         //'JStormes\Datatables'
