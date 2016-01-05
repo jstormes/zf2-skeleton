@@ -183,7 +183,8 @@ return array(
         ),
         
     ),
-//     'service_manager' => array(
+     'service_manager' => array(
+
 //         'abstract_factories' => array(
 //             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
 //             'Zend\Log\LoggerAbstractServiceFactory',
@@ -191,15 +192,16 @@ return array(
 //         'aliases' => array(
 //             'translator' => 'MvcTranslator',
 //         ),
-//         'factories' => array(
+         'factories' => array(
 //             'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
 //             'topleft_navigation' => 'JStormes\Bootstrap\Navigation\Service\TopLeftNavigationFactory',
 //             'bottomleft_navigation' => 'JStormes\Bootstrap\Navigation\Service\BottomLeftNavigationFactory',
-//         ),
+                'Demo\Model\SlickGridTables' => 'Demo\Model\SlickGridTables'
+         ),
 //         'services' => array(
             
 //         ),
-//     ),
+     ),
     'translator' => array(
         'locale' => 'en_US',
         'translation_file_patterns' => array(
@@ -217,6 +219,9 @@ return array(
         ),
     ),
     'view_manager' => array(
+        'strategies' => array(
+            'ViewJsonStrategy',
+        ),
 //         'display_not_found_reason' => true,
 //         'display_exceptions'       => true,
 //         'doctype'                  => 'HTML5',
@@ -239,6 +244,7 @@ return array(
             ),
         ),
     ),
+    // jstomres namespace specific options
     'jstormes' => array(
         'bootstrap' => array(
             'menu' => array(

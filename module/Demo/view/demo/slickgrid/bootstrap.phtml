@@ -23,7 +23,31 @@ $this->headLink()->appendStylesheet($this->basePath() . '/phpslickgrid/css/slick
 
 <script src="/phpslickgrid/js/editors/mysql.js"></script>
 
+
+
+<!-- JSON RPC library -->
+<script src="/phpslickgrid/js/json/jquery.zend.jsonrpc.js"></script>
+
+
+<?php echo $this->PHPSlickGrid('Demo\Model\SlickGridTables'); ?>
 <script>
+
+function getColumns() {
+
+	var col = null;
+	
+	// Point our model to the model on the server.
+    var model = new jQuery.Zend.jsonrpc({
+    	url : "/demo/slickgrid/rpc"
+    }); 
+
+    if (col === null)
+        col = model.getSlickGridColumns();
+
+    return col;
+    
+}
+
 function myFormatter(row, cell, value, columnDef, dataContext) {
 	  return "<button type=\"button\" class=\"btn btn-primary btn-xs\">Extra small button</button>";
 	}
@@ -56,6 +80,6 @@ function myFormatter(row, cell, value, columnDef, dataContext) {
         effortDriven: (i % 5 == 0)
       };
     }
-    grid = new Slick.Grid("#grid", data, columns, options);
+    grid = new Slick.Grid("#grid", data, getColumns(), options);
   })
 </script>
