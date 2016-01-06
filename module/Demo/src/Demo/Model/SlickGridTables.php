@@ -18,6 +18,7 @@ class SlickGridTables extends AbstractSlickGridGateway
     function test() {
         $t=$this->getColumns();
         
+        return $t;
         //fb($t);
     }
 }

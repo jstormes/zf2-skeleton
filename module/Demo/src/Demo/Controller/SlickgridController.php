@@ -21,11 +21,17 @@ class SlickgridController extends AbstractActionController
 {
     public function indexAction()
     {
-        $model = new SlickGridTables();
         
-        print_r($model->getColumns());
+        $sgTable = $this->getServiceLocator()->get('PHPSlickGridTableGateway');
+        $model = $sgTable->get('demo');
         
-        $rows = $model->select();
+        //$model = new SlickGridTables();
+        
+        //print_r($model->getColumns());
+        echo "<pre>";
+        
+        echo "========\n\n";
+        $rows = $model->getColumns();
         
         print_r($rows);
         exit();
@@ -38,6 +44,7 @@ class SlickgridController extends AbstractActionController
     {
         $table = new SlickGridTables();
          
+        $table->test();
         return new ViewModel();
     
     }
@@ -46,7 +53,10 @@ class SlickgridController extends AbstractActionController
     {
         // Our model to expose as a JSON RPC service.
         //$model = new SampleData();
-        $model = new SlickGridTables();
+        //$model = new SlickGridTables();
+        
+        $sgTable = $this->getServiceLocator()->get('PHPSlickGridTableGateway');
+        $model = $sgTable->get('demo');
         
         
         // New JSON RPS-Server.

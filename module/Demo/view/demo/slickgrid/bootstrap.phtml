@@ -32,20 +32,33 @@ $this->headLink()->appendStylesheet($this->basePath() . '/phpslickgrid/css/slick
 <?php echo $this->PHPSlickGrid('Demo\Model\SlickGridTables'); ?>
 <script>
 
+//Point our model to the model on the server.
+var model = new jQuery.Zend.jsonrpc({
+	url : "/demo/slickgrid/rpc"
+}); 
+
 function getColumns() {
 
 	var col = null;
-	
-	// Point our model to the model on the server.
-    var model = new jQuery.Zend.jsonrpc({
-    	url : "/demo/slickgrid/rpc"
-    }); 
 
     if (col === null)
-        col = model.getSlickGridColumns();
+        col = model.getColumns();
 
     return col;
-    
+}
+
+function getOptions() {
+
+	var opt = null;
+
+    if (opt === null)
+        opt = model.getOptions();
+
+    return opt;
+}
+
+function getData() {
+	
 }
 
 function myFormatter(row, cell, value, columnDef, dataContext) {
@@ -61,13 +74,14 @@ function myFormatter(row, cell, value, columnDef, dataContext) {
     {id: "finish", name: "", field: "finish", formatter: myFormatter},
     {id: "effort-driven", name: "Effort Driven", field: "effortDriven"}
   ];
+  
   var options = {
     enableCellNavigation: true,
     enableColumnReorder: true,
     forceFitColumns: true,
     rowHeight: 35,
-    
   };
+  
   $(function () {
     var data = [];
     for (var i = 0; i < 500; i++) {
@@ -80,6 +94,6 @@ function myFormatter(row, cell, value, columnDef, dataContext) {
         effortDriven: (i % 5 == 0)
       };
     }
-    grid = new Slick.Grid("#grid", data, getColumns(), options);
+    grid = new Slick.Grid("#grid", data, getColumns(), getOptions());
   })
 </script>
