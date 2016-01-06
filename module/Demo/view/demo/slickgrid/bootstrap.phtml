@@ -58,7 +58,12 @@ function getOptions() {
 }
 
 function getData() {
-	
+
+	var data = [];
+
+	data = model.getData();
+
+	return data;
 }
 
 function myFormatter(row, cell, value, columnDef, dataContext) {
@@ -94,6 +99,6 @@ function myFormatter(row, cell, value, columnDef, dataContext) {
         effortDriven: (i % 5 == 0)
       };
     }
-    grid = new Slick.Grid("#grid", data, getColumns(), getOptions());
+    grid = new Slick.Grid("#grid", getData(), getColumns(), getOptions());
   })
 </script>
